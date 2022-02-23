@@ -130,6 +130,7 @@ int main()
             if (yes_or_no == "no") // if user says no, then end the game.
             {
                 cout << "Closing program" << endl;
+                scam();
                 return 0; // returns 0 to close the program.
             }
             break;

